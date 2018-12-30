@@ -1,7 +1,7 @@
-let fs = require('fs');
 let prev = (new Date()).getTime();
 
-let x = fs.readFileSync('stub');
+let x = require('./stub.json');
+
 let curr = (new Date()).getTime();
 
 console.log(curr - prev);
