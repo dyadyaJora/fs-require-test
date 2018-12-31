@@ -6,7 +6,12 @@ timestamp() {
 
 t1=$(timestamp)
 
-node ./$1 > /dev/null
+if [[ $1 == "import-test.mjs" ]]
+then 
+  node --experimental-modules ./$1 > /dev/null 2>/dev/null
+else 
+  node ./$1 > /dev/null
+fi
 
 t2=$(timestamp)
 
