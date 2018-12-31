@@ -6,7 +6,7 @@ timestamp() {
 
 t1=$(timestamp)
 
-if [[ $1 == "import-test.mjs" ]]
+if [[ $1 == "tested-scripts/import-test.mjs" ]]
 then 
   node --experimental-modules ./$1 > /dev/null 2>/dev/null
 else 
